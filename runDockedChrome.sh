@@ -1,6 +1,7 @@
 #!/bin/bash
 
 docker run \
+-d \
 -it \
 --rm \
 --name chrome \
