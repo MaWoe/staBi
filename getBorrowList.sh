@@ -11,5 +11,5 @@ fi
 cd $BASE
 
 rm -f ${SOURCE}
-pybot --loglevel NONE -v USER_NAME:$1 $BASE/stabi.robot > /dev/null 2>&1
-php transformSource.php ${SOURCE} 2>/dev/null
+/usr/local/bin/pybot --outputdir $BASE/logs -v USER_NAME:$1 $BASE/stabi.robot >> $BASE/logs/$(basename $0).log 2>&1
+php transformSource.php ${SOURCE} 2>>$BASE/logs/transformSource.php.log

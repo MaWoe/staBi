@@ -5,3 +5,4 @@ source.html
 userAccounts.robot
 config.sh
 lists/*
+logs/*
