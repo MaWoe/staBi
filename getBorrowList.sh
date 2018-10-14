@@ -11,5 +11,5 @@ fi
 cd $BASE
 
 rm -f ${SOURCE}
-pybot -v USER_NAME:$1 $BASE/stabi.robot
-php transformSource.php ${SOURCE}
+pybot --loglevel NONE -v USER_NAME:$1 $BASE/stabi.robot > /dev/null 2>&1
+php transformSource.php ${SOURCE} 2>/dev/null

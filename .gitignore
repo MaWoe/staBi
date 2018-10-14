@@ -3,4 +3,5 @@ output.xml
 report.html
 source.html
 userAccounts.robot
-
+config.sh
+lists/*

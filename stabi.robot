@@ -34,6 +34,7 @@ Login
   Open Browser
   ...  url=https://katalog.stadtbibliothek.freiburg.de/
   ...  browser=Chrome
+  ...  remote_url=http://127.0.0.1:4444/wd/hub
   
   Wait For Element And Click
   ...  xpath://*[@id="login"]/a
@@ -72,8 +73,9 @@ Open Browser
     ${options}=  Call Method  ${options}  to_capabilities
 
     Create WebDriver
-    ...  driver_name=Chrome
+    ...  driver_name=Remote
     ...  alias=${alias}
+    ...  command_executor=${remote_url}
     ...  desired_capabilities=${options}
 
     Go To  ${url}
