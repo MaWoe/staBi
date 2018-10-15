@@ -1,7 +1,7 @@
 #!/bin/bash
 
 BASE=$(dirname $0);
-SOURCE="source.html"
+SOURCE="$BASE/logs/source.html"
 
 if [ -z "$1" ]; then
   echo "Usage: $0 <user_name>"
