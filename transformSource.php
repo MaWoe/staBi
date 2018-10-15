@@ -33,12 +33,14 @@ foreach ($nodeList as $key => $node) {
         explode("\n", $time->textContent)
     );
     $timeRange = $timeLines[2];
+    list($from, $to) = explode(' - ', $timeRange);
     $location = $timeLines[3];
 
     $data[] = [
         'title' => $title,
         'author' => $author,
-        'date' => $timeRange,
+        'from' => $from,
+        'to' => $to,
         'location' => $location,
         'account' => '?'
     ];
