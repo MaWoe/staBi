@@ -7,5 +7,5 @@ cd $BASE;
 
 for name in $NAMES; do
     echo "Processing \"$name\""
-    ./getBorrowList.sh $name > "lists/$name.txt"
+    ./getBorrowList.sh $name > "lists/$name.json"
 done
