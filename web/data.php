@@ -1,4 +1,6 @@
 <?php
+header('Content-Type: text/json');
+header('Access-Control-Allow-Origin: *');
 
 $path = __DIR__ . '/../lists';
 $d = new DirectoryIterator($path);
@@ -12,4 +14,4 @@ foreach (new RegexIterator($d, '/\.json$/') as $item) {
     }
 }
 
-print_r($overallData);
+echo json_encode($overallData);
